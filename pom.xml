@@ -61,7 +61,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>springboot-mysql</finalName>
+		<finalName>spring-boot-mysql</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
