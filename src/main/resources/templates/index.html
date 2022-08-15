@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ashok IT</title>
+
+<style>
+.button {
+	background-color: #008CBA;; /* Green */
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+}
+</style>
+
+</head>
+<body>
+
+	<h2>Book Store - Application</h2>
+	<form th:action="@{/}" th:object="${book}" method="POST">
+		<table>
+			<tr>
+				<td>Book Name</td>
+				<td><input type="text" th:field="*{bookName}" /></td>
+			</tr>
+			<tr>
+				<td>Author Name</td>
+				<td><input type="text" th:field="*{authorName}" /></td>
+			</tr>
+			<tr>
+				<td>Book Price</td>
+				<td><input type="text" th:field="*{bookPrice}" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit" class="button" /></td>
+			</tr>
+		</table>
+	</form>
+
+	<hr />
+
+	<table th:if="${not #lists.isEmpty(books)}" border="1">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Author Name</th>
+		</tr>
+		<tr th:each="book : ${books}">
+			<td th:text="${book.bookId}"></td>
+			<td th:text="${book.bookName}"></td>
+			<td th:text="${book.bookPrice}"></td>
+			<td th:text="${book.authorName}"></td>
+		</tr>
+	</table>
+
+	<hr />
+
+
+	<h1>Ashok IT</h1>
+
+	<p>Contact Us : + 91 - 9985 39 66 77</p>
+	<p>
+		Visit : <a href="https://www.ashokitech.com">https://www.ashokitech.com</a>
+	</p>
+	<p>
+		<b> Copy Rights @ Ashok IT - 2022 </b>
+	</p>
+
+
+</body>
+</html>
