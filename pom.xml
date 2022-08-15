@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>in.ashokit</groupId>
-	<artifactId>springboot-mysql</artifactId>
+	<artifactId>spring-boot-mysql</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>springboot-mysql</name>
+	<name>spring-boot-mysql</name>
 	<description>Demo project for springboot-mysql</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -39,9 +39,8 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
