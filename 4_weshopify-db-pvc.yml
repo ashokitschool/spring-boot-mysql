@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: weshopify-db-psvc
+  name: weshopify-db-pvc
 spec:
-  volumeName: weshopify-db-psv      
+  volumeName: weshopify-db-pv      
   accessModes:
     - ReadWriteOnce
   storageClassName: local-storage
