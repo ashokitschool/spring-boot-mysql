@@ -13,7 +13,7 @@ spec:
     volumes: 
      - name: weshpify-app-db-volume
        persistentVolumeClaim: 
-        claimName: weshopify-db-psvc
+        claimName: weshopify-db-pvc
     containers: 
      - name: weshopify-app-db
        image: mysql
